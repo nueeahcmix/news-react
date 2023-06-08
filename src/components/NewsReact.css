@@ -1,0 +1,256 @@
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  display: inline-block;
+  /* border: 1px solid blue; */
+  height: 120px;
+  width: 45%;
+  background-image: url('./news-02.png');
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fadeInLeft .5s ease-in;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+/* 전체 */
+.all {
+  height: 100vh;
+  overflow: hidden;
+  padding: 50px 200px;
+  background-image: url('./news-01.png');
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 클리어 */
+.top::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* 카테고리  */
+.category {
+  padding: 5px 30px 5px 30px;
+  border-left: 5px solid #00642f;
+  background-color: #00A84D;
+  border-radius: 0px 20px 20px 0px;
+  float: right;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, .5);
+}
+
+/* 라디오버튼 */
+label {
+  display: inline-block;
+  background-color: white;
+  border-radius: 50px;
+  width: 165px;
+  vertical-align: middle;
+  padding: 5px 20px;
+  margin: 5px 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+}
+
+#icons {
+  vertical-align: text-bottom;
+  font-size: 25px;
+  padding: 5px;
+  margin-left: 3px;
+  border-radius: 50%;
+  background-color: #00A84D;
+  color: white;
+}
+
+.category-title {
+  padding: 5px;
+  display: inline-block;
+  margin-left: 25px;
+}
+
+[type="radio"] {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0%, -50%);
+  appearance: none;
+  border: 2px solid #00A84D;
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+  padding: 0px;
+  transition: all .1s ease;
+}
+
+[type="radio"]:checked {
+  border: 6px solid #00A84D;
+}
+
+[type="radio"]:focus-visible {
+  outline-offset: 2px;
+  outline: 2px dotted #00A84D;
+}
+
+[type="radio"]:hover {
+  box-shadow: 0 0 0 2px lightgray;
+  cursor: pointer;
+}
+
+/* 리스트 */
+.container {
+  font-family: 'NEXON Lv2 Gothic';
+  display: block;
+  padding: 0px 15px;
+}
+
+.container table {
+  border-collapse: collapse;
+  margin: 50px 0px 30px 0px;
+  background-color: rgb(255, 255, 255, .6);
+  backdrop-filter: blur(10px);
+}
+
+.news_list {
+  border-collapse: separate;
+  text-align: center;
+  width: 100%;
+  border-top: 3px solid #00642f;
+  border-bottom: 3px solid #00642f;
+}
+
+.news_list th {
+  height: 50px;
+  color: #fff;
+  background-color: #00A84D;
+  border-bottom: 3px solid #00642f;
+}
+
+.news_list th:not(:last-child) {
+  border-right: 2px solid white;
+}
+
+.news_list td {
+  line-height: 20px;
+}
+
+.news_list td:not(:last-child) {
+  border-right: 1px dashed #00A84D;
+}
+
+.news_list td:nth-child(1) {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.news_list td:nth-child(3) {
+  background-color: #dcffe7;
+  font-size: 14px;
+  font-weight: bold;
+  color: #00642f;
+}
+
+.news_list td:nth-child(4) {
+  font-size: 14px;
+}
+
+.news_list td p {
+  text-align: left;
+  padding: 0px 5%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news_list tr {
+  border-bottom: 1px solid #00A84D;
+}
+
+.news_list tr:last-child {
+  border: none;
+}
+
+.news_list tr:hover {
+  background-color: #CEFFE5;
+}
+
+.news_list a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* 페이지 */
+.page-buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageicon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.page-buttons button {
+  width: 30px;
+  height: 30px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  border: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pageicon:hover {
+  color: #00A84D;
+}
+
+.page-buttons button:hover {
+  background-color: #CEFFE5;
+  color: #000;
+}
+
+.page-buttons .current {
+  background-color: #00A84D;
+  color: white;
+  cursor: default;
+}
+
+.page-buttons span {
+  display: block;
+  font-size: 14px;
+}
